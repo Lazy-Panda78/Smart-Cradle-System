@@ -1,88 +1,73 @@
-# IoT-Based Smart Cradle System 👶🛏️
+# IoT-Based Smart Cradle System
 
-An IoT-enabled Smart Baby Cradle System built using **ESP32**, sensors, and embedded automation to assist parents in monitoring and soothing babies automatically.
+A smart baby cradle prototype developed using ESP32, sensors, and embedded automation to assist in baby monitoring and basic caregiving tasks.
 
-This project was developed as a **4th Semester IoT Field Project** at **GLA University, Mathura**.
+This project was built as a 4th semester IoT field project at GLA University, Mathura.
 
 ---
 
-# 📌 Overview
+## Project Overview
 
-The Smart Cradle System is designed to automate baby monitoring using IoT concepts and embedded systems.
+The main idea behind this project was to create a simple and practical smart cradle system that can automatically respond to different conditions around a baby.
 
-The system can:
+The system continuously monitors:
+- Baby crying using a sound sensor
+- Temperature and humidity using DHT11
+- Environmental conditions around the cradle
 
-- Detect baby crying using a sound sensor
-- Automatically swing the cradle
-- Monitor temperature and humidity
-- Turn ON a cooling fan automatically
+Based on the sensor readings, the cradle can automatically:
+- Swing when crying is detected
+- Turn on a cooling fan during high temperature
 - Trigger alerts using a buzzer
-- Display real-time status on LCD
+- Display system status on an LCD screen
 
-This prototype demonstrates how IoT can be applied to real-life childcare and automation systems.
-
----
-
-# 🚀 Features
-
-✅ Cry Detection System  
-✅ Automatic Cradle Swing  
-✅ Temperature Monitoring  
-✅ Automatic Fan Control  
-✅ Humidity Detection  
-✅ Buzzer Alert System  
-✅ LCD Live Monitoring  
-✅ ESP32-based Automation  
+The goal of the project was to explore how IoT and embedded systems can be applied in real-life caregiving applications.
 
 ---
 
-# 🛠️ Components Used
+## Features
 
-- ESP32 Microcontroller
-- DHT11 Sensor
+- Automatic cradle swinging mechanism
+- Cry detection using sound sensor
+- Temperature monitoring
+- Humidity monitoring
+- Automatic fan control
+- Real-time LCD status display
+- Buzzer alert system
+- ESP32-based automation
+
+---
+
+## Components Used
+
+- ESP32 Development Board
+- DHT11 Temperature & Humidity Sensor
 - Sound Sensor
 - Relay Module
-- DC Motor
 - L298N Motor Driver
+- DC Motor
 - LCD I2C Display
 - Buzzer
-- Breadboard & Jumper Wires
+- Jumper Wires & Breadboard
 
 ---
 
-# ⚙️ Working Principle
+## How the System Works
 
-## 🔊 Cry Detection
-The sound sensor continuously monitors sound levels.
+### Cry Detection
+The sound sensor continuously checks sound intensity levels.  
+When the sound crosses a predefined threshold, the ESP32 activates the motor, which swings the cradle for a fixed duration.
 
-When sound exceeds the threshold:
-- ESP32 detects crying
-- Motor activates
-- Cradle starts swinging automatically
+### Temperature Monitoring
+The DHT11 sensor monitors temperature in real time.  
+If the temperature rises above the set threshold, the relay module turns on the fan automatically.
 
----
+### Humidity Monitoring
+The system also monitors humidity levels.  
+If humidity exceeds the safe range, the buzzer is activated to alert nearby users.
 
-## 🌡️ Temperature Monitoring
-The DHT11 sensor monitors temperature continuously.
-
-If temperature becomes high:
-- Relay activates
-- Cooling fan turns ON automatically
-
----
-
-## 💧 Humidity Monitoring
-Humidity values are continuously monitored.
-
-If humidity crosses the threshold:
-- Buzzer alert activates
-- LCD displays warning message
-
----
-
-## 📟 LCD Monitoring
-The LCD displays real-time system status such as:
-
+### LCD Feedback
+The LCD displays different system states such as:
 - MONITORING
 - FAN ON
 - CRY MOTOR ON
@@ -90,48 +75,37 @@ The LCD displays real-time system status such as:
 
 ---
 
-# 🧠 Technologies Used
+## Project Images
 
-- Embedded C/C++
-- Arduino IDE
-- ESP32
-- IoT Concepts
-- Sensor Integration
-- Automation Systems
+### Prototype Demonstration
+
+![Prototype](images/image2.jpeg)
 
 ---
 
-# 📷 Project Images
+### Hardware Setup
 
-## 🔹 Prototype Demonstration
-
-![Prototype](images/image1.jpeg)
+![Hardware Setup](images/image1.jpeg)
 
 ---
 
-## 🔹 Hardware Setup
+## Demonstration Video
 
-![Hardware Setup](images/image2.jpeg)
+Project walkthrough and prototype demonstration:
 
----
+🔗 https://www.linkedin.com/posts/yash-upadhyay-a23491326_heres-a-quick-walkthrough-of-our-iot-based-ugcPost-7457118015705231361-i7dE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJL9XsBwGK-CF5UpRQNf6Fz2qoehhFEAW4
 
-# 🎥 Project Demonstration Video
-
-🔗 **Video Explanation & Prototype Demonstration:**  
-
-https://www.linkedin.com/posts/yash-upadhyay-a23491326_heres-a-quick-walkthrough-of-our-iot-based-ugcPost-7457118015705231361-i7dE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJL9XsBwGK-CF5UpRQNf6Fz2qoehhFEAW4
-
-The video demonstrates:
-- Complete hardware setup
+The video includes:
+- Hardware explanation
 - Sensor integration
+- Working demonstration
 - Cradle movement
+- LCD monitoring
 - Fan automation
-- Real-time monitoring
-- Prototype explanation
 
 ---
 
-# 📂 Project Structure
+## Project Structure
 
 ```bash
 Smart-Cradle-System/
